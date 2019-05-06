@@ -1,10 +1,12 @@
 #include <iostream>
 
+#include "algorithms/MathAlgorithms.h"
 #include "algorithms/SearchAlgorithms.h"
 #include "algorithms/SortAlgorithms.h"
 
 using namespace std;
 int main() {
+
     cout << "Welcome to Data&Algo!" << endl << endl;
 
     // A. DIVIDE & CONQUER
@@ -75,12 +77,12 @@ int main() {
          << to_string(arr3[2]) + ", "
          << to_string(arr3[3]) + ", "
          << to_string(arr3[4]) + ", "
-         << to_string(arr3[5]) + "]" << endl;
+         << to_string(arr3[5]) + "]" << endl << endl;
 
     // Example 2.
 
     // Define and print array.
-    int arr4[] = {50, 14, 10, 81, 2, 58};
+    int arr4[] = {3, 1, 943, 23, 99, 9};
     cout << "Original array: " << endl
          << "[" + to_string(arr4[0]) + ", "
          << to_string(arr4[1]) + ", "
@@ -99,14 +101,50 @@ int main() {
          << to_string(arr4[2]) + ", "
          << to_string(arr4[3]) + ", "
          << to_string(arr4[4]) + ", "
-         << to_string(arr4[5]) + "]" << endl;
+         << to_string(arr4[5]) + "]" << endl << endl;
 
     // B. DYNAMIC PROGRAMMING
     cout << "B. Dynamic Programming:" << endl << endl;
 
     // FIBONACCI
+    cout << "1) Fibonacci sequence" << endl << endl;
 
+    // Example 1.
 
+    int n1 = 6;
+    int fib1 = MathAlgorithms::fib(n1);
+    cout << "Fibonacci of " + to_string(n1) + " is " + to_string(fib1) << endl;
+
+    // Example 2.
+
+    int n2 = 10;
+    int fib2 = MathAlgorithms::fib(n2);
+    cout << "Fibonacci of " + to_string(n2) + " is " + to_string(fib2) << endl << endl;
+
+    // NUMBER OF PERMUTATIONS
+    cout << "2) Number of permutations" << endl << endl;
+
+    // Example 1.
+
+    int elem1 = 4;
+    int size1 = 2;
+    int nperm1 = MathAlgorithms::numberOfPermutations(elem1, size1);
+
+    cout << "Permutations of " + to_string(size1) + " elements in a set of " + to_string(elem1) + " different elements: " + to_string(nperm1) << endl;
+
+    // Example 2.
+
+    int elem2 = 15;
+    int size2 = 3;
+    int nperm2 = MathAlgorithms::numberOfPermutations(elem2, size2);
+
+    cout << "Permutations of " + to_string(size2) + " elements in a set of " + to_string(elem2) + " different elements: " + to_string(nperm2) << endl;
+
+    // C. GENETIC
+
+    // D. GREEDY
+
+    cout << endl;
     cout << "Goodbye, World!" << endl;
     return 0;
 }

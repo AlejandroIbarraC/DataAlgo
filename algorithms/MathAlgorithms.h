@@ -5,9 +5,13 @@
 #ifndef DATA_ALGO_MATHALGORITHMS_H
 #define DATA_ALGO_MATHALGORITHMS_H
 
+#include <iostream>
 
 class MathAlgorithms {
 
+public:
+    static int fib(int n);
+    static int numberOfPermutations(int n, int x);
 };
 
 
