@@ -138,11 +138,48 @@ int main() {
     int size2 = 3;
     int nperm2 = MathAlgorithms::numberOfPermutations(elem2, size2);
 
-    cout << "Permutations of " + to_string(size2) + " elements in a set of " + to_string(elem2) + " different elements: " + to_string(nperm2) << endl;
+    cout << "Permutations of " + to_string(size2) + " elements in a set of " + to_string(elem2) + " different elements: " + to_string(nperm2) << endl << endl;
 
-    // C. GENETIC
+    // C. GREEDY
+    cout << "C. Greedy" << endl << endl;
 
-    // D. GREEDY
+    // MIN.COIN CHANGE
+    cout << "1) Minimum coins to change" << endl << endl;
+
+    // Example 1.
+
+    int money1 = 1080;
+    cout << "Change " + to_string(money1) + " with the following coins:" << endl;
+    MathAlgorithms::minNumberOfCoins(money1);
+    cout << endl << endl;
+
+    // Example 2.
+
+    int money2 = 2040;
+    cout << "Change " + to_string(money2) + " with the following coins:" << endl;
+    MathAlgorithms::minNumberOfCoins(money2);
+    cout << endl << endl;
+
+    // EGYPTIAN FRACTIONS
+    cout << "2) Egyptian Fractions" << endl << endl;
+
+    // Example 1.
+
+    int num1 = 60;
+    int den1 = 140;
+    cout << "Egyptian fraction of " + to_string(num1) + "/" + to_string(den1) + " is ";
+    MathAlgorithms::egyptianFraction(num1, den1);
+
+    // Example 2.
+
+    int num2 = 7;
+    int den2 = 13;
+    cout << endl << "Egyptian fraction of " + to_string(num2) + "/" + to_string(den2) + " is ";
+    MathAlgorithms::egyptianFraction(num2, den2);
+
+    cout << endl;
+
+    // D. GENETIC
 
     cout << endl;
     cout << "Goodbye, World!" << endl;
