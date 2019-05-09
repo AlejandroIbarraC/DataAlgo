@@ -3,6 +3,8 @@
 #include "algorithms/MathAlgorithms.h"
 #include "algorithms/SearchAlgorithms.h"
 #include "algorithms/SortAlgorithms.h"
+#include "Genetics/Individual.h"
+#include "Genetics/Population.h"
 
 using namespace std;
 int main() {
@@ -177,9 +179,34 @@ int main() {
     cout << endl << "Egyptian fraction of " + to_string(num2) + "/" + to_string(den2) + " is ";
     MathAlgorithms::egyptianFraction(num2, den2);
 
-    cout << endl;
+    cout << endl<<endl<<endl;
 
     // D. GENETIC
+
+    cout<<"Genetic Algorithm\n"<<endl;
+
+    //Population Initialize
+    Population *population = new Population();
+    population->initializePopulation(2);
+
+    cout<<"Gens of first individual: ";
+    population->individuals[0]->showGens();
+
+    cout<<endl<<"Gens of Second individual: ";
+    population->individuals[1]->showGens();
+
+
+    //CrossOver
+    cout<<endl<<"CrossOver"<<endl<<endl<<"Gens of children after CrossOver: "<<endl;
+
+    population->crossOver();
+    population->individuals[2]->showGens();
+
+    cout<<"\nChild Mutation"<<endl<<"New Gens: "<<endl;
+
+    population->individuals[2]->mutate();
+    population->individuals[2]->showGens();
+
 
     cout << endl;
     cout << "Goodbye, World!" << endl;
